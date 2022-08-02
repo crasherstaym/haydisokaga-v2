@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="dmxAppConnect/dmxAppConnect.js"></script>
+    <meta charset="UTF-8" />
+    <title>Haydi Sokağa!</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:"
+    />
+    <link rel="stylesheet" href="Framework7/5/css/framework7.bundle.min.css" />
+
+    <script src="Framework7/5/js/framework7.bundle.min.js"></script>
+    <script src="js/routes.js"></script>
+    <script
+      src="dmxAppConnect/dmxFramework7/dmxFramework7.js"
+      defer=""
+    ></script>
+    <link
+      rel="stylesheet"
+      href="dmxFramework7_icons/css/framework7-icons.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="dmxAppConnect/dmxAnimateCSS/animate.min.css" />
+    <script
+      src="dmxAppConnect/dmxAnimateCSS/dmxAnimateCSS.js"
+      defer=""
+    ></script>
+    <script src="dmxAppConnect/dmxFormatter/dmxFormatter.js" defer=""></script>
+    <script src="dmxAppConnect/dmxDatastore/dmxDatastore.js" defer=""></script>
+  </head>
+  <style>
+    .button {
+      cursor: pointer;
+    }
+  </style>
+
+  <body is="dmx-app" id="haydisokaga">
+    <div id="app" is="dmx-f7-app" auto-dark-theme="true">
+      <link
+        rel="wappler-include"
+        type="content-page"
+        href="kayit.html"
+        path="/kayit"
+      />
+      <link
+        rel="wappler-include"
+        type="content-page"
+        href="searchScreen.html"
+        path="/searchScreen"
+      />
+      <div id="main" class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div id="index" class="page" data-name="index">
+          <div class="login-screen modal-in loginpage" id="login1">
+            <div
+              id="login1_page"
+              data-name="login1_page"
+              class="page login-screen-page color-theme-green"
+            >
+              <div class="page-content login-screen-content">
+                <div class="login-screen-title">Haydi Sokağa!</div>
+                <form
+                  is="dmx-serverconnect-form"
+                  method="post"
+                  id="serverconnectform1"
+                >
+                  <div class="list">
+                    <ul>
+                      <li class="item-content item-input">
+                        <div class="item-inner">
+                          <div class="item-title item-label">Kullanıcı Adı</div>
+                          <div class="item-input">
+                            <input
+                              type="text"
+                              name="username"
+                              placeholder="Kullanıcı Adı"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item-content item-input">
+                        <div class="item-inner">
+                          <div class="item-title item-label">Şifre</div>
+                          <div class="item-input">
+                            <input
+                              type="password"
+                              name="password"
+                              placeholder="Şifre"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="list">
+                    <ul>
+                      <li></li>
+                    </ul>
+                    <div>
+                      <a href="/searchScreen" class="button">Giris Yap</a>
+                    </div>
+                    <div class="block-footer">
+                      <p>Üye değil misiniz?</p>
+                      <a href="/kayit" class="button">Kayıt Ol</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="left">
+                <a href="#" class="link" id="darkmode"
+                  ><i class="icon f7-icons">moon</i>
+                </a>
+              </div>
+              <div class="title">Haydi Sokağa</div>
+
+              <div class="right">
+                <a href="#" class="link"
+                  >Profil
+
+                  <i class="icon f7-icons">person_alt_circle</i></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Toolbar -->
+          <div class="toolbar tabbar tabbar-labels toolbar-bottom">
+            <div class="toolbar-inner">
+              <a href="#" class="tab-link tab-link-active">
+                <i class="icon f7-icons">envelope_fill</i>
+                <span class="tabbar-label">Inbox</span>
+              </a>
+              <a href="#" class="tab-link tab-link">
+                <i class="icon f7-icons">search_circle</i>
+                <span class="tabbar-label">Arama</span>
+              </a>
+              <a href="#" class="tab-link">
+                <i class="icon f7-icons"
+                  >today_fill<span class="badge color-red">5</span></i
+                >
+                <span class="tabbar-label">Calendar</span>
+              </a>
+              <a href="#" class="tab-link">
+                <i class="icon f7-icons">cloud_fill</i>
+                <span class="tabbar-label">Upload</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Scrollable page content -->
+          <div class="page-content wappler-block">
+            <div class="card card-expandable">
+              <div class="card-content">
+                <div class="bg-color-yellow exp-card" style="height: 300px">
+                  <div class="card-header display-block card-shadowed">
+                    Piknik etkinliği<br />
+                    <small style="opacity: 0.7">Keyifli Anlar</small>
+                  </div>
+                  <a
+                    href="#"
+                    class="link card-close card-opened-fade-in color-black"
+                    style="position: absolute; right: 15px; top: 15px"
+                  >
+                    <i class="icon f7-icons">xmark_circle_fill</i>
+                  </a>
+                </div>
+                <div class="card-content-padding">
+                  <p>
+                    Framework7 - is a free and open source HTML mobile framework
+                    to develop hybrid mobile apps or web apps with iOS or
+                    Android (Material) native look and feel. It is also an
+                    indispensable prototyping apps tool to show working app
+                    prototype as soon as possible in case you need to.
+                  </p>
+                  <p>
+                    The main approach of the Framework7 is to give you an
+                    opportunity to create iOS and Android (Material) apps with
+                    HTML, CSS and JavaScript easily and clear. Framework7 is
+                    full of freedom. It doesn't limit your imagination or offer
+                    ways of any solutions somehow. Framework7 gives you freedom!
+                  </p>
+                  <p>
+                    Framework7 is not compatible with all platforms. It is
+                    focused only on iOS and Android (Material) to bring the best
+                    experience and simplicity.
+                  </p>
+                  <p>
+                    Framework7 is definitely for you if you decide to build iOS
+                    and Android hybrid app (Cordova or Capacitor) or web app
+                    that looks like and feels as great native iOS or Android
+                    (Material) apps.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card card-expandable">
+              <div class="card-content">
+                <div
+                  class="bg-color-yellow exp-card-konser"
+                  style="height: 300px"
+                >
+                  <div class="card-header display-block card-shadowed">
+                    Konser etkinliği<br />
+                    <small style="opacity: 0.7">Sınırsız Eğlence</small>
+                  </div>
+                  <a
+                    href="#"
+                    class="link card-close card-opened-fade-in color-black"
+                    style="position: absolute; right: 15px; top: 15px"
+                  >
+                    <i class="icon f7-icons">xmark_circle_fill</i>
+                  </a>
+                </div>
+                <div class="card-content-padding">
+                  <p>
+                    Framework7 - is a free and open source HTML mobile framework
+                    to develop hybrid mobile apps or web apps with iOS or
+                    Android (Material) native look and feel. It is also an
+                    indispensable prototyping apps tool to show working app
+                    prototype as soon as possible in case you need to.
+                  </p>
+                  <p>
+                    The main approach of the Framework7 is to give you an
+                    opportunity to create iOS and Android (Material) apps with
+                    HTML, CSS and JavaScript easily and clear. Framework7 is
+                    full of freedom. It doesn't limit your imagination or offer
+                    ways of any solutions somehow. Framework7 gives you freedom!
+                  </p>
+                  <p>
+                    Framework7 is not compatible with all platforms. It is
+                    focused only on iOS and Android (Material) to bring the best
+                    experience and simplicity.
+                  </p>
+                  <p>
+                    Framework7 is definitely for you if you decide to build iOS
+                    and Android hybrid app (Cordova or Capacitor) or web app
+                    that looks like and feels as great native iOS or Android
+                    (Material) apps.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card card-expandable">
+              <div class="card-content">
+                <div class="bg-color-yellow exp-card" style="height: 300px">
+                  <div class="card-header display-block card-shadowed">
+                    Piknik etkinliği<br />
+                    <small style="opacity: 0.7">Keyifli Anlar</small>
+                  </div>
+                  <a
+                    href="#"
+                    class="link card-close card-opened-fade-in color-black"
+                    style="position: absolute; right: 15px; top: 15px"
+                  >
+                    <i class="icon f7-icons">xmark_circle_fill</i>
+                  </a>
+                </div>
+                <div class="card-content-padding">
+                  <p>
+                    Framework7 - is a free and open source HTML mobile framework
+                    to develop hybrid mobile apps or web apps with iOS or
+                    Android (Material) native look and feel. It is also an
+                    indispensable prototyping apps tool to show working app
+                    prototype as soon as possible in case you need to.
+                  </p>
+                  <p>
+                    The main approach of the Framework7 is to give you an
+                    opportunity to create iOS and Android (Material) apps with
+                    HTML, CSS and JavaScript easily and clear. Framework7 is
+                    full of freedom. It doesn't limit your imagination or offer
+                    ways of any solutions somehow. Framework7 gives you freedom!
+                  </p>
+                  <p>
+                    Framework7 is not compatible with all platforms. It is
+                    focused only on iOS and Android (Material) to bring the best
+                    experience and simplicity.
+                  </p>
+                  <p>
+                    Framework7 is definitely for you if you decide to build iOS
+                    and Android hybrid app (Cordova or Capacitor) or web app
+                    that looks like and feels as great native iOS or Android
+                    (Material) apps.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+
+      <!-- Your main view, should have "view-main" class -->
+    </div>
+  </body>
+</html>
