@@ -20,4 +20,12 @@ var routes = [
     path: "/searchScreen",
     url: "./searchScreen.html",
   },
+  {
+    path: "/profil",
+    url: "./profil.html",
+  },
+  {
+    path: "/profil",
+    url: "/profil.html",
+  },
 ];

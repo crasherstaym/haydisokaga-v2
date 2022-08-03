@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <script src="dmxAppConnect/dmxAppConnect.js"></script>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -11,12 +12,13 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
     <meta name="theme-color" content="#2196f3" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data:"
+      content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:"
     />
-
     <title>profil</title>
 
     <link rel="stylesheet" href="Framework7/5/css/framework7-bundle.min.css" />
@@ -24,6 +26,10 @@
       rel="stylesheet"
       href="dmxFramework7_icons/css/framework7-icons.css"
     />
+    <script src="cordova.js"></script>
+    <script src="Framework7/5/js/framework7.bundle.min.js"></script>
+    <script src="js/routes.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
     <style>
       :root {
         --f7-bars-shadow-bottom-image: none;
@@ -84,10 +90,17 @@
   <body>
     <div id="app">
       <div class="view view-main view-init">
-        <div class="page page-email-list"></div>
+        <div class="page" data-page="index"></div>
         <div class="navbar elevation-6">
-          <div class="navbar-bg"></div>
           <div class="navbar-inner">
+            <div class="segmented color-theme-gray">
+              <div class="left">
+                <a href="#" class="link back"
+                  ><i class="icon icon-back"></i>Back
+                </a>
+              </div>
+            </div>
+
             <div class="block block-strong no-margin no-hairlines">
               <h3 class="no-margin-bottom">Profil</h3>
             </div>
@@ -98,11 +111,12 @@
                 href="#"
                 data-popover=".profile-popover"
               >
-                <img src="https://i.pravatar.cc/56?u=9" class="avatar" />
+                <img src="56.jpg" class="avatar" />
               </a>
             </div>
           </div>
         </div>
+
         <form action="connect.php" method="post">
           <div class="page-content">
             <div class="list no-chevron">
@@ -212,160 +226,6 @@
             </div>
           </div>
         </form>
-        <div class="row margin-horizontal">
-          <div class="col-100 medium-66 margin-top">
-            <div class="card">
-              <div class="card-header">
-                <span>Best Sellers</span>
-                <div class="segmented">
-                  <a
-                    class="button button-small button-outline tab-link-active tab-link"
-                    style="width: auto"
-                    >Today</a
-                  >
-                  <a
-                    class="button button-small button-outline tab-link"
-                    style="width: auto"
-                    >Week</a
-                  >
-                  <a
-                    class="button button-small button-outline tab-link"
-                    style="width: auto"
-                    >Month</a
-                  >
-                </div>
-              </div>
-              <div class="card-content card-content-padding scrollable">
-                <div class="list media-list">
-                  <ul>
-                    <li class="item-content">
-                      <div class="item-media">
-                        <img
-                          class="product-image"
-                          src="https://placeimg.com/112/112/1"
-                        />
-                      </div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">Logo Design</div>
-                          <div class="item-after">12 sales</div>
-                        </div>
-                        <div class="item-text">Design</div>
-                      </div>
-                    </li>
-                    <li class="item-content">
-                      <div class="item-media">
-                        <img
-                          class="product-image"
-                          src="https://placeimg.com/112/112/2"
-                        />
-                      </div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">Website Design</div>
-                          <div class="item-after">10 sales</div>
-                        </div>
-                        <div class="item-text">Design</div>
-                      </div>
-                    </li>
-                    <li class="item-content">
-                      <div class="item-media">
-                        <img
-                          class="product-image"
-                          src="https://placeimg.com/112/112/3"
-                        />
-                      </div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">PSD to HTML</div>
-                          <div class="item-after">8 sales</div>
-                        </div>
-                        <div class="item-text">Coding</div>
-                      </div>
-                    </li>
-                    <li class="item-content">
-                      <div class="item-media">
-                        <img
-                          class="product-image"
-                          src="https://placeimg.com/112/112/4"
-                        />
-                      </div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">Business Card</div>
-                          <div class="item-after">7 sales</div>
-                        </div>
-                        <div class="item-text">Design</div>
-                      </div>
-                    </li>
-                    <li class="item-content">
-                      <div class="item-media">
-                        <img
-                          class="product-image"
-                          src="https://placeimg.com/112/112/5"
-                        />
-                      </div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">Sketch to HTML</div>
-                          <div class="item-after">5 sales</div>
-                        </div>
-                        <div class="item-text">Coding</div>
-                      </div>
-                    </li>
-                    <li class="item-content">
-                      <div class="item-media">
-                        <img
-                          class="product-image"
-                          src="https://placeimg.com/112/112/5"
-                        />
-                      </div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">Vecotor assets</div>
-                          <div class="item-after">4 sales</div>
-                        </div>
-                        <div class="item-text">Design</div>
-                      </div>
-                    </li>
-                    <li class="item-content">
-                      <div class="item-media">
-                        <img
-                          class="product-image"
-                          src="https://placeimg.com/112/112/6"
-                        />
-                      </div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">50 Twitter Folowers Pack</div>
-                          <div class="item-after">3 sales</div>
-                        </div>
-                        <div class="item-text">Social</div>
-                      </div>
-                    </li>
-                    <li class="item-content">
-                      <div class="item-media">
-                        <img
-                          class="product-image"
-                          src="https://placeimg.com/112/112/6"
-                        />
-                      </div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">
-                            100 Twitter Folowers Pack
-                          </div>
-                          <div class="item-after">2 sales</div>
-                        </div>
-                        <div class="item-text">Social</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- Popovers -->
@@ -375,7 +235,7 @@
           <div class="list no-hairlines no-hairlines-between">
             <ul>
               <li>
-                <a href="#" class="item-link item-content">
+                <a href="/kayit" class="item-link item-content">
                   <div class="item-media">
                     <i class="icon f7-icons">gear_fill</i>
                   </div>
@@ -447,10 +307,10 @@
         </div>
       </div>
     </div>
-    <script src="Framework7/5/js/framework7.bundle.min.js"></script>
+
     <script>
       var $ = Dom7;
-      var globalTheme = "light";
+      var globalTheme = "white";
       let theme = globalTheme;
 
       const app = new Framework7({
@@ -481,19 +341,6 @@
           document.getElementById("dark").checked = true;
         }
       };
-
-      // create searchbar
-      const searchbar = app.searchbar.create({
-        el: ".searchbar",
-        searchContainer: ".list-email",
-        searchIn: ".item-title",
-        on: {
-          search(sb, query, previousQuery) {
-            console.log(query, previousQuery);
-          },
-        },
-      });
-
       checkTheme();
     </script>
   </body>
