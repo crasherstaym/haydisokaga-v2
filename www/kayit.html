@@ -1,55 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="dmxAppConnect/dmxAppConnect.js"></script>
-    <meta charset="UTF-8" />
-    <title>Haydi Sokağa!</title>
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
-    />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:"
-    />
-    <link rel="stylesheet" href="Framework7/5/css/framework7.bundle.min.css" />
-    <script src="cordova.js"></script>
-    <script src="Framework7/5/js/framework7.bundle.min.js"></script>
-    <script src="js/routes.js"></script>
-    <script
-      src="dmxAppConnect/dmxFramework7/dmxFramework7.js"
-      defer=""
-    ></script>
-    <link
-      rel="stylesheet"
-      href="dmxFramework7_icons/css/framework7-icons.css"
-    />
+<head>
+  <script src="dmxAppConnect/dmxAppConnect.js"></script>
+  <meta charset="UTF-8" />
+  <title>Haydi Sokağa!</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="dmxAppConnect/dmxAnimateCSS/animate.min.css" />
-    <script
-      src="dmxAppConnect/dmxAnimateCSS/dmxAnimateCSS.js"
-      defer=""
-    ></script>
-    <script src="dmxAppConnect/dmxFormatter/dmxFormatter.js" defer=""></script>
-    <script src="dmxAppConnect/dmxDatastore/dmxDatastore.js" defer=""></script>
-    <style>
-      
-    </style>
-  </head>
-  <body is="dmx-app" id="haydisokaga">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:" />
+  <link rel="stylesheet" href="Framework7/5/css/framework7.bundle.min.css" />
+  <script src="cordova.js"></script>
+  <script src="Framework7/5/js/framework7.bundle.min.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="dmxAppConnect/dmxFramework7/dmxFramework7.js" defer=""></script>
+  <link rel="stylesheet" href="dmxFramework7_icons/css/framework7-icons.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="dmxAppConnect/dmxAnimateCSS/animate.min.css" />
+  <script src="dmxAppConnect/dmxAnimateCSS/dmxAnimateCSS.js" defer=""></script>
+  <script src="dmxAppConnect/dmxFormatter/dmxFormatter.js" defer=""></script>
+  <script src="dmxAppConnect/dmxDatastore/dmxDatastore.js" defer=""></script>
+  <style>
+
+  </style>
+</head>
+
+<body is="dmx-app" id="haydisokaga">
   <div class="page">
     <div class="navbar">
-      
+
       <div class="navbar-inner">
         <div class="left">
           <a href="#" class="link back"><i class="icon icon-back"></i>Back </a>
@@ -67,22 +51,14 @@
                 <li class="item-content item-input">
                   <div class="item-inner">
                     <div class="item-input">
-                      <input
-                        type="text"
-                        name="username"
-                        placeholder="Kullanıcı Adı"
-                      />
+                      <input type="text" name="username" placeholder="Kullanıcı Adı" />
                     </div>
                   </div>
                 </li>
                 <li class="item-content item-input">
                   <div class="item-inner">
                     <div class="item-input">
-                      <input
-                        type="password"
-                        name="password"
-                        placeholder="Şifre"
-                      />
+                      <input type="password" name="password" placeholder="Şifre" />
                     </div>
                   </div>
                 </li>
@@ -96,12 +72,8 @@
                 <li class="item-content item-input">
                   <div class="item-inner">
                     <div class="item-input">
-                      <input
-                        type="text"
-                        name="name_surname"
-                        placeholder="Ad Soyad"
-                      />
-                      
+                      <input type="text" name="name_surname" placeholder="Ad Soyad" />
+
                     </div>
                   </div>
                 </li>
@@ -110,35 +82,27 @@
                     <div class="row no-gap">
                       <div class="col-40">
                         <div class="item-input">
-                          <input
-                            type="number"
-                            name="tc"
-                            placeholder="TC Kimlik No"
-                          />
+                          <input type="number" name="tc" placeholder="TC Kimlik No" />
                         </div>
                       </div>
                       <div class="segmented">
-                      <div class="col-50" style="padding-top: 4px">
-                        TC Vatandaşı Değilim
+                        <div class="col-50" style="padding-top: 4px">
+                          TC Vatandaşı Değilim
+                        </div>
+                        <div class="col-10">
+                          <label class="toggle toggle-init color-green">
+                            <input type="checkbox" />
+                            <span class="toggle-icon"></span>
+                          </label>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <label class="toggle toggle-init color-green">
-                          <input type="checkbox" />
-                          <span class="toggle-icon"></span>
-                        </label>
-                      </div>
-                    </div>
                     </div>
                   </div>
                 </li>
                 <li class="item-content item-input">
                   <div class="item-inner">
                     <div class="item-input">
-                      <input
-                        type="tel"
-                        name="tel"
-                        placeholder="Telefon Numarası"
-                      />
+                      <input type="tel" name="tel" placeholder="Telefon Numarası" />
                     </div>
                   </div>
                 </li>
@@ -149,11 +113,7 @@
                   <div class="item-inner">
                     <div class="item-title item-label">Doğum Tarihi</div>
                     <div class="item-input-wrap">
-                      <input
-                        type="date"
-                        name="date"
-                        placeholder="Please choose..."
-                      />
+                      <input type="date" name="date" placeholder="Please choose..." />
                     </div>
                   </div>
                 </li>
@@ -171,4 +131,5 @@
       <!-- Your main view, should have "view-main" class -->
     </div>
   </div>
+
 </html>
